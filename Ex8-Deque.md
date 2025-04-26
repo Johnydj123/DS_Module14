@@ -1,48 +1,38 @@
-# Ex2B Priority Queue
-## DATE: 05.03.2025
+# Ex2C Deque
+## DATE: 07.03.2025
 ## AIM:
-To formulate the C code to display the elements of the priority queue after insertion and deletion operation.
+To write a C function to count the number of elements present in the deque.
 
 ## Algorithm
 1. Start the program.
 2. Include required libraries.
-3. Scan the number of elements to be inserted and deleted.
-4. Run loop accordingly and call insert and delete function iteratively.
+3. Define a function to count the number of elements in the deQueue.
+4. Run a loop from zero index to maximum index value and increment count if the value is not equal to zero. Return the counted value.
 5. End the program.
 
 ## Program:
 ```
 /*
-Program to o display the elements of the priority queue after insertion and deletion operation
+Program to count the number of elements present in the deque
 Developed by: DINAGARAN JOHNY.S
 RegisterNumber: 212223220020
+*/
 
-
-#include <stdio.h>
-int size = 0;
-int main() {
-    int m,k,e,r,e1;
-  int array[10];
-  scanf("%d",&m);
-  for(k=0;k<m;k++)
+#include<stdio.h>
+int count(int *arr) {
+  int c = 0, i;
+  for(i=0;i<MAX;i++)
   {
-      scanf("%d",&e);
-      insert(array,e);
+      if(arr[i]!=0)
+      c++;
   }
-  scanf("%d",&r);
-  for(k=0;k<r;k++)
-  {
-      scanf("%d",&e1);
-      deleteRoot(array,e1);
-  }
-  printf("Max-Heap array after insertion and deletion: ");
-  printArray(array,size);
+  return c;
 }
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/e8142f44-e466-4f77-a893-2f1d3211aaaa)
+![image](https://github.com/user-attachments/assets/483ebfec-ec48-4475-adad-037d587fff24)
 
 ## Result:
-Thus, the C program to display the elements of the priority queue after insertion and deletion operation is implemented successfully
+Thus, the C code to count the number of elements present in the deque is implemented successfully.
